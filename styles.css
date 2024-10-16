@@ -1,0 +1,370 @@
+/* Загальні стилі */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    background: url('img/2149741272.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 150px 0;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* Напівпрозорий шар поверх фону */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Чорний напівпрозорий фон */
+    z-index: -1; /* Розташовує шар під текстом */
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Тінь для тексту */
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Тінь для тексту */
+}
+
+.cta-button {
+    background: #099e1a;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background: #077b14;
+}
+
+/* Advantages Section */
+.advantages-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+    color: #099e1a;
+}
+
+.card p {
+    padding: 0 15px 20px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Integration Section */
+.integration-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.benefit-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 3;
+}
+
+.benefit-card {
+    background-color: #099e1a;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-header i {
+    font-size: 2em;
+}
+
+.benefit-card h3 {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.hidden-text {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    margin-top: 10px;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.benefit-card:hover .hidden-text {
+    max-height: 100px;
+}
+
+.image-container {
+    flex: 2;
+    text-align: center;
+}
+
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    max-height: 300px;
+}
+
+/* Screenshots Section */
+.screenshots {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.screenshots img {
+    width: 45%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Proof Section */
+.social-proof-section {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-proof-section .statistics {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.social-proof-section .stat {
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.social-proof-section .stat i {
+    font-size: 2em;
+    color: #099e1a;
+    margin-bottom: 10px;
+}
+
+/* CTA Section */
+.cta-section {
+    background: #099e1a;
+    color: white;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.cta-section h2 {
+    margin-bottom: 20px;
+}
+
+.cta-section a {
+    padding: 15px 30px;
+    background: white;
+    color: #099e1a;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.cta-section a:hover {
+    background: #077b14;
+    color: white;
+}
+/* Медиа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-cards {
+        flex: 1;
+        width: 100%; /* Карточки займатимуть всю ширину */
+        max-width: 400px; /* Максимальна ширина для карточок */
+    }
+
+    .image-container {
+        width: 100%;
+        margin-top: 20px; /* Відступ зверху для зображення */
+    }
+
+    .image-container img {
+        max-width: 200px; /* Обмеження ширини зображення */
+    }
+}
+.definition-section {
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.definition-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.logo-container {
+    flex: 1;
+    max-width: 300px;
+    text-align: center;
+}
+
+.logo-container img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.definition-text {
+    flex: 2;
+    text-align: left;
+}
+
+.definition-text h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #099e1a;
+}
+
+.definition-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.how-it-works {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.steps-wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.step {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 25%;
+    transition: transform 0.3s;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+}
+
+.step i {
+    font-size: 2em;
+    color: #099e1a;
+    margin-bottom: 10px;
+}
+.testimonials {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.testimonials-wrapper {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    text-align: left;
+}
