@@ -329,23 +329,23 @@ body {
 }
 
 .step {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 25%;
-    transition: transform 0.3s;
+    background-color: #fff; /* Білий фон */
+    padding: 20px; /* Внутрішній відступ */
+    border-radius: 10px; /* Закруглені кути */
+    text-align: center; /* Текст по центру */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легкий тіньовий ефект */
+    width: 22%; /* Ширина елемента */
+    transition: transform 0.3s; /* Плавна анімація при наведенні */
 }
 
 .step:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px); /* Піднімається при наведенні */
 }
 
 .step i {
-    font-size: 2em;
-    color: #099e1a;
-    margin-bottom: 10px;
+    font-size: 2em; /* Розмір іконки */
+    color: #099e1a; /* Зелений колір іконки */
+    margin-bottom: 10px; /* Відступ від тексту */
 }
 .testimonials {
     background-color: #f9f9f9;
@@ -367,4 +367,29 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 45%;
     text-align: left;
+}
+.process-flow {
+    display: flex;
+    justify-content: space-around; /* Рівномірний розподіл між елементами */
+    align-items: center; /* Вирівнювання елементів по центру */
+    flex-wrap: wrap; /* Дозволяє переносити елементи при потребі */
+    gap: 20px; /* Проміжок між елементами */
+}
+.arrow {
+    font-size: 2em; /* Розмір стрілки */
+    color: #099e1a; /* Колір стрілки */
+    text-align: center; /* Вирівнювання по центру */
+}
+@media (max-width: 768px) {
+    .process-flow {
+        flex-direction: column; /* Розташування елементів вертикально */
+    }
+
+    .step {
+        width: 80%; /* Зменшення ширини кроків для мобільних */
+    }
+
+    .arrow {
+        display: none; /* Приховуємо стрілки на мобільних */
+    }
 }
