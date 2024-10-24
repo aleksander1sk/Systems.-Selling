@@ -112,7 +112,7 @@ body {
 /* Integration Section */
 .integration-section {
     background-color: #f9f9f9;
-    padding: 50px 0;
+    padding: 20px 0;
     text-align: center;
 }
 
@@ -208,14 +208,19 @@ body {
 }
 
 .social-proof-section .statistics {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     margin-top: 20px;
 }
 
 .social-proof-section .stat {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
     text-align: center;
-    font-size: 1.2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .social-proof-section .stat i {
@@ -235,7 +240,9 @@ body {
 .cta-section h2 {
     margin-bottom: 20px;
 }
-
+.cta-section p {
+    font-size: 24px;
+}
 .cta-section a {
     padding: 15px 30px;
     background: white;
@@ -450,7 +457,8 @@ body {
     display: flex;
     align-items: center; /* Вирівнювання по центру вертикально */
     gap: 20px; /* Проміжок між логотипом та текстом */
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 10px 0;
     justify-content: space-evenly;
 }
@@ -465,4 +473,52 @@ body {
     margin-top: 5px;
     line-height: 1.5;
     color: #333;
+}
+/* Адаптивний стиль для мобільних пристроїв */
+@media (max-width: 768px) {
+    .hero-section {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .hero-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .cta-button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .support-header {
+        flex-direction: column; /* Вирівнювання по вертикалі для мобільних */
+        align-items: center;
+    }
+
+    .logo-container {
+        margin-bottom: 15px;
+    }
+
+    .statistics {
+        grid-template-columns: 1fr; /* Один стовпчик для мобільної версії */
+    }
+
+    .stat {
+        margin-bottom: 10px;
+    }
+}
+@media (max-width: 768px) {
+    .testimonials-wrapper {
+        padding: 0; /* Забираємо зайві відступи */
+    }
+
+    .testimonial {
+        width: 100%; /* Гарантуємо, що блоки займають всю ширину */
+        box-sizing: border-box; /* Враховує padding і border у ширині */
+    }
 }
