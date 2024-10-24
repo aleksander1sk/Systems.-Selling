@@ -438,3 +438,31 @@ body {
         grid-template-columns: 1fr;
     }
 }
+.support-logo {
+    width: 220px;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #f8f8f8;
+}
+.support-header {
+    display: flex;
+    align-items: center; /* Вирівнювання по центру вертикально */
+    gap: 20px; /* Проміжок між логотипом та текстом */
+    margin-bottom: 30px;
+    padding: 10px 0;
+    justify-content: space-evenly;
+}
+.support-text {
+    max-width: 600px;
+}
+.support-text h2 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+.support-text p {
+    margin-top: 5px;
+    line-height: 1.5;
+    color: #333;
+}
